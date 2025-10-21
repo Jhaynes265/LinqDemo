@@ -113,6 +113,8 @@ foreach(CharacterDTO characterDTO in characters.Where(c => c.YearCreated == 1981
 }
 
 // [1.19c] How many character(s) were created in 1981 (Mario series)?
+int MarioCount = characters.Where(c => c.Series.Contains("Mario") && c.YearCreated == 1981).Count();
+Console.WriteLine($"{MarioCount} Mario characters were created in 1981.");
 
 // [1.19d] List the character(s) created in that 1981 (Mario series) - return character name only.
 
