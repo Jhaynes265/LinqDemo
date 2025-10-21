@@ -106,7 +106,11 @@ Console.Clear();
 // How many character(s) were created in 1981 (all series)?
 Console.WriteLine($"How many characters were created in 1981? {characters.Count(c => c.YearCreated == 1981)}");
 
-// [1.19b] List the character(s) created in that 1981 (all series) - return character name and series only.
+// List the character(s) created in that 1981 (all series) - return character name and series only.
+foreach(CharacterDTO characterDTO in characters.Where(c => c.YearCreated == 1981).Select(c => new CharacterDTO{ Id = c.Id, Name = c.Name, Series = c.Series }).OrderBy(c => c.Name))
+{
+   Console.WriteLine(characterDTO.Display());
+}
 
 // [1.19c] How many character(s) were created in 1981 (Mario series)?
 
