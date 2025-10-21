@@ -94,11 +94,72 @@ Console.Clear();
 // }
 
 // all characters grouped by year created
-var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
-foreach(var characterByYearCreated in CharactersByYearCreated)
-{
-  Console.WriteLine(characterByYearCreated.Key);
-  foreach(var character in characterByYearCreated) {
-    Console.WriteLine($"\t{character.Name}");
-  }
-}
+// var CharactersByYearCreated = characters.GroupBy(c => c.YearCreated);
+// foreach(var characterByYearCreated in CharactersByYearCreated)
+// {
+//   Console.WriteLine(characterByYearCreated.Key);
+//   foreach(var character in characterByYearCreated) {
+//     Console.WriteLine($"\t{character.Name}");
+//   }
+// }
+
+// How many character(s) were created in 1981 (all series)?
+Console.WriteLine($"How many characters were created in 1981? {characters.Count(c => c.YearCreated == 1981)}");
+
+// [1.19b] List the character(s) created in that 1981 (all series) - return character name and series only.
+
+// [1.19c] How many character(s) were created in 1981 (Mario series)?
+
+// [1.19d] List the character(s) created in that 1981 (Mario series) - return character name only.
+
+// [1.19e] How many character(s) were created in 1981 (Donkey Kong series)?
+
+// [1.19f] List the character(s) created in that 1981 (Donkey Kong series) - return character name only.
+
+// [1.20a] How many character(s) made their first appearance in Donkey Kong 64?
+
+// [1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
+
+// [1.21a] Are there any character(s) with no alias (all series)?
+
+// [1.21b] How many character(s) with no alias (all series)?
+
+// [1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
+
+// [1.21d] Are there any character(s) with no alias (Mario series)?
+
+// [1.21e] How many character(s) with no alias (Mario series)?
+
+// [1.21f] List the character(s) with no alias (Mario series) - return character name and alias only.
+
+// [1.21g] Are there any character(s) with no alias (Donkey Kong series)?
+
+// [1.21h] How many character(s) with no alias (Donkey Kong series)?
+
+// [1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
+
+// [1.22a] Do any character(s) have an alias of Snowmad King (return type must be boolean)?
+
+// [1.22b] List the character(s) that have an alias of Snowmad King - return character name and alias only.
+
+// [1.23a] Do any character(s) that have an alias of Winter Kong (return type must be boolean)?
+
+// [1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only.
+
+// [1.24a] How many character(s) have a species of Kremling?
+
+// [1.24b] List the character(s) that have a species of Kremling - return character name only.
+
+// [1.25a] How many character(s) in the Mario series are Human species?
+
+// [1.25b] List the character(s) in the Mario series that are Human species - return character name only.
+
+// [1.25c] How many character(s) in the Mario series are Koopa species?
+
+// [1.25d] List the character(s) in the Mario series that are Koopa species - return character name only.
+
+// [1.25e] How many character(s) in the Mario series are something other than Human or Koopa species?
+
+// [1.25f] List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
+
+// [1.26] List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
