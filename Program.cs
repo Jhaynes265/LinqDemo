@@ -238,6 +238,10 @@ foreach (String? name in characters.Where(c => c.Species.Contains("Koopa") && c.
 int MarioNonHumanKoopaSpeciesAmount = characters.Where (c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario")).Count();
 Console.WriteLine($"{MarioNonHumanKoopaSpeciesAmount} Mario characters are neither humans or koopas.");
 
-// [1.25f] List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
+// List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
+foreach(var obj in characters.Where (c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario")).Select(c => new { c.Name, c.Species}))
+{
+    Console.WriteLine($"{obj.Name} - {obj.Species}");
+}
 
 // [1.26] List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
