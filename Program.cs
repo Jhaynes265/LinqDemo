@@ -224,7 +224,9 @@ foreach (String? name in characters.Where(c => c.Species.Contains("Human") && c.
     Console.WriteLine($"{name}");
 }
 
-// [1.25c] How many character(s) in the Mario series are Koopa species?
+// How many character(s) in the Mario series are Koopa species?
+int MarioKoopaSpeciesAmount = characters.Where (c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Count();
+Console.WriteLine($"{MarioKoopaSpeciesAmount} Mario characters are Koopas.");
 
 // [1.25d] List the character(s) in the Mario series that are Koopa species - return character name only.
 
