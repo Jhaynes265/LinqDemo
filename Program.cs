@@ -208,7 +208,11 @@ Console.Clear();
 int KremlingSpeciesAmount = characters.Where (c => c.Species.Contains("Kremling")).Count();
 Console.WriteLine($"{KremlingSpeciesAmount} characters are Kremlings.");
 
-// [1.24b] List the character(s) that have a species of Kremling - return character name only.
+// List the character(s) that have a species of Kremling - return character name only.
+foreach (String? name in characters.Where(c => c.Species.Contains("Kremling")).Select(c => c.Name))
+{
+    Console.WriteLine($"{name}");
+}
 
 // [1.25a] How many character(s) in the Mario series are Human species?
 
