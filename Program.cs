@@ -146,7 +146,9 @@ Console.Clear();
 bool AliasCount = characters.Any(c => c.Alias.Count == 0);
 Console.WriteLine($"Are there characters with no aliases: {AliasCount}");
 
-// [1.21b] How many character(s) with no alias (all series)?
+// How many character(s) with no alias (all series)?
+int NoAliasAmount = characters.Where (c => c.Alias.Count == 0).Count();
+Console.WriteLine($"{NoAliasAmount} Characters do not have aliases.");
 
 // [1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
 
