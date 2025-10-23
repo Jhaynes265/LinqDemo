@@ -198,7 +198,11 @@ Console.Clear();
 bool WinterAlias = characters.Any(c => c.Alias.Contains("Winter Kong"));
 Console.WriteLine($"Does any character have an alias of Winter Kong: {WinterAlias}");
 
-// [1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only.
+// List the character(s) that have an alias of Winter Kong - return character name and alias only.
+foreach(var obj in characters.Where(c => c.Alias.Contains("Winter Kong")).Select(c => new { c.Name, c.Alias}))
+{
+    Console.WriteLine($"{obj.Name} - {string.Join(", ",obj.Alias)}");
+}
 
 // [1.24a] How many character(s) have a species of Kremling?
 
