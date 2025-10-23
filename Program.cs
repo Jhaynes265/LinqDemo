@@ -188,7 +188,11 @@ Console.Clear();
 bool SnowAlias = characters.Any(c => c.Alias.Contains("Snowmad King"));
 Console.WriteLine($"Does any character have an alias of Snowmad King: {SnowAlias}");
 
-// [1.22b] List the character(s) that have an alias of Snowmad King - return character name and alias only.
+// List the character(s) that have an alias of Snowmad King - return character name and alias only.
+foreach(var obj in characters.Where(c => c.Alias.Contains("Snowmad King")).Select(c => new { c.Name, c.Alias}))
+{
+    Console.WriteLine($"{obj.Name} - {string.Join(", ",obj.Alias)}");
+}
 
 // [1.23a] Do any character(s) that have an alias of Winter Kong (return type must be boolean)?
 
