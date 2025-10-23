@@ -204,17 +204,19 @@ Console.Clear();
 //     Console.WriteLine($"{obj.Name} - {string.Join(", ",obj.Alias)}");
 // }
 
-// How many character(s) have a species of Kremling?
-int KremlingSpeciesAmount = characters.Where (c => c.Species.Contains("Kremling")).Count();
-Console.WriteLine($"{KremlingSpeciesAmount} characters are Kremlings.");
+// // How many character(s) have a species of Kremling?
+// int KremlingSpeciesAmount = characters.Where (c => c.Species.Contains("Kremling")).Count();
+// Console.WriteLine($"{KremlingSpeciesAmount} characters are Kremlings.");
 
-// List the character(s) that have a species of Kremling - return character name only.
-foreach (String? name in characters.Where(c => c.Species.Contains("Kremling")).Select(c => c.Name))
-{
-    Console.WriteLine($"{name}");
-}
+// // List the character(s) that have a species of Kremling - return character name only.
+// foreach (String? name in characters.Where(c => c.Species.Contains("Kremling")).Select(c => c.Name))
+// {
+//     Console.WriteLine($"{name}");
+// }
 
-// [1.25a] How many character(s) in the Mario series are Human species?
+// How many character(s) in the Mario series are Human species?
+int MarioHumanSpeciesAmount = characters.Where (c => c.Species.Contains("Human") && c.Series.Contains("Mario")).Count();
+Console.WriteLine($"{MarioHumanSpeciesAmount} Mario characters are Humans.");
 
 // [1.25b] List the character(s) in the Mario series that are Human species - return character name only.
 
