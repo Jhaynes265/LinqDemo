@@ -214,34 +214,38 @@ Console.Clear();
 //     Console.WriteLine($"{name}");
 // }
 
-// How many character(s) in the Mario series are Human species?
-int MarioHumanSpeciesAmount = characters.Where (c => c.Species.Contains("Human") && c.Series.Contains("Mario")).Count();
-Console.WriteLine($"{MarioHumanSpeciesAmount} Mario characters are Humans.");
+// // How many character(s) in the Mario series are Human species?
+// int MarioHumanSpeciesAmount = characters.Where (c => c.Species.Contains("Human") && c.Series.Contains("Mario")).Count();
+// Console.WriteLine($"{MarioHumanSpeciesAmount} Mario characters are Humans.");
 
-// List the character(s) in the Mario series that are Human species - return character name only.
-foreach (String? name in characters.Where(c => c.Species.Contains("Human") && c.Series.Contains("Mario")).Select(c => c.Name))
-{
-    Console.WriteLine($"{name}");
-}
+// // List the character(s) in the Mario series that are Human species - return character name only.
+// foreach (String? name in characters.Where(c => c.Species.Contains("Human") && c.Series.Contains("Mario")).Select(c => c.Name))
+// {
+//     Console.WriteLine($"{name}");
+// }
 
-// How many character(s) in the Mario series are Koopa species?
-int MarioKoopaSpeciesAmount = characters.Where (c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Count();
-Console.WriteLine($"{MarioKoopaSpeciesAmount} Mario characters are Koopas.");
+// // How many character(s) in the Mario series are Koopa species?
+// int MarioKoopaSpeciesAmount = characters.Where (c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Count();
+// Console.WriteLine($"{MarioKoopaSpeciesAmount} Mario characters are Koopas.");
 
-// List the character(s) in the Mario series that are Koopa species - return character name only.
-foreach (String? name in characters.Where(c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Select(c => c.Name))
-{
-    Console.WriteLine($"{name}");
-}
+// // List the character(s) in the Mario series that are Koopa species - return character name only.
+// foreach (String? name in characters.Where(c => c.Species.Contains("Koopa") && c.Series.Contains("Mario")).Select(c => c.Name))
+// {
+//     Console.WriteLine($"{name}");
+// }
 
-// How many character(s) in the Mario series are something other than Human or Koopa species?
-int MarioNonHumanKoopaSpeciesAmount = characters.Where (c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario")).Count();
-Console.WriteLine($"{MarioNonHumanKoopaSpeciesAmount} Mario characters are neither humans or koopas.");
+// // How many character(s) in the Mario series are something other than Human or Koopa species?
+// int MarioNonHumanKoopaSpeciesAmount = characters.Where (c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario")).Count();
+// Console.WriteLine($"{MarioNonHumanKoopaSpeciesAmount} Mario characters are neither humans or koopas.");
 
-// List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
-foreach(var obj in characters.Where (c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario")).Select(c => new { c.Name, c.Species}))
+// // List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
+// foreach(var obj in characters.Where (c => !c.Species.Contains("Koopa") && !c.Species.Contains("Human") && c.Series.Contains("Mario")).Select(c => new { c.Name, c.Species}))
+// {
+//     Console.WriteLine($"{obj.Name} - {obj.Species}");
+// }
+
+// List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
+foreach(var obj in characters.Where (c => !c.Species.Contains("Kong") && !c.Species.Contains("Human") && c.Series.Contains("Donkey Kong")).Select(c => new { c.Name, c.Species}))
 {
     Console.WriteLine($"{obj.Name} - {obj.Species}");
 }
-
-// [1.26] List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
