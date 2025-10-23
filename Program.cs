@@ -160,7 +160,9 @@ foreach(var obj in characters.Where(c => c.Alias.Count == 0).Select(c => new { c
 bool MarioAliasCount = characters.Any(c => c.Alias.Count == 0 && c.Series.Contains("Mario"));
 Console.WriteLine($"Are there any mario characters with no aliases: {AliasCount}");
 
-// [1.21e] How many character(s) with no alias (Mario series)?
+// How many character(s) with no alias (Mario series)?
+int MarioNoAliasAmount = characters.Where (c => c.Alias.Count == 0 && c.Series.Contains("Mario")).Count();
+Console.WriteLine($"{MarioNoAliasAmount} Mario characters do not have aliases.");
 
 // [1.21f] List the character(s) with no alias (Mario series) - return character name and alias only.
 
